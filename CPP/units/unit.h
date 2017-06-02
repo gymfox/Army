@@ -30,6 +30,7 @@ class Unit {
         int damage;
         
     protected:
+        bool isFriendly;
         int unitType;
         State* normalState;
         State* wolfState;
@@ -59,6 +60,7 @@ class Unit {
         virtual int getHPLimit() const;
         virtual int getCurrentHP() const;
         virtual int getDamage() const;
+        virtual bool isAlly() const;
 
         virtual State* getCurrentState() const;
         virtual State* getNextState() const;

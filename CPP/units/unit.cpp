@@ -80,6 +80,10 @@ int Unit::getHPLimit() const {
     return healthPointLimit;
 }
 
+bool Unit::isAlly() const {
+    return isFriendly;
+}
+
 State* Unit::getCurrentState() const {
     return normalState;
 }

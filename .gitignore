@@ -1,3 +1,8 @@
 *.o
+<<<<<<< HEAD
+runner
+runner.cpp
+=======
 runner.cpp
 runner
+>>>>>>> e18aaec847e7c2ec415dbdbcd8fcd6f1efb2b92e
