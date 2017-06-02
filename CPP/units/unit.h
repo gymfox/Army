@@ -30,6 +30,7 @@ class Unit {
         int damage;
         
     protected:
+        bool isFriendly;
         int unitType;
         State* normalState;
         State* wolfState;
@@ -39,7 +40,7 @@ class Unit {
         virtual void ensureIsNotSelfAttack(Unit* victim);
 
     public:
-        Unit(const string& name, int healthPoint, int damage);
+        Unit(const string& name, int healthPoint, int damage, bool isFriendly);
         virtual ~Unit();
 
         virtual void attack(Unit* victim);
@@ -59,6 +60,7 @@ class Unit {
         virtual int getHPLimit() const;
         virtual int getCurrentHP() const;
         virtual int getDamage() const;
+        virtual bool isAlly(Unit* target) const;
 
         virtual State* getCurrentState() const;
         virtual State* getNextState() const;

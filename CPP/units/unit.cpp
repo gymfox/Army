@@ -2,11 +2,12 @@
 
 using namespace std;
 
-Unit::Unit(const string& name, int healthPoint, int damage) {
+Unit::Unit(const string& name, int healthPoint, int damage, bool isFriendly) {
     this->name = name;
     this->healthPointLimit = healthPoint;
     this->currentHP = healthPoint;
     this->damage = damage;
+    this->isFriendly = isFriendly;
 }
 
 Unit::~Unit() {}
@@ -78,6 +79,10 @@ int Unit::getCurrentHP() const {
 
 int Unit::getHPLimit() const {
     return healthPointLimit;
+}
+
+bool Unit::isAlly(Unit* target) const {
+    return isFriendly;
 }
 
 State* Unit::getCurrentState() const {
