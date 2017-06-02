@@ -81,7 +81,7 @@ int Unit::getHPLimit() const {
     return healthPointLimit;
 }
 
-bool Unit::isAlly(Unit* target) const {
+bool Unit::isAlly() const {
     return isFriendly;
 }
 

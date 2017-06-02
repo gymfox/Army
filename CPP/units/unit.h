@@ -60,7 +60,7 @@ class Unit {
         virtual int getHPLimit() const;
         virtual int getCurrentHP() const;
         virtual int getDamage() const;
-        virtual bool isAlly(Unit* target) const;
+        virtual bool isAlly() const;
 
         virtual State* getCurrentState() const;
         virtual State* getNextState() const;
