@@ -12,10 +12,14 @@ Spellcaster::~Spellcaster() {}
 void Spellcaster::castSpell(Unit* victim) {
     ensureIsAlive();
     ensureIsNotSelfAttack(victim);
+    ensureIsNotAlly(victim);
     ensureManaIsNotOver();
     
-    ability->castSpell(victim, currentSpell);
+    /*
+        this part in process...
+    ability->castSpell(victim, currentSpell); 
     currentMP -= currentSpell->getManaConsumption();
+    */
 }
 
 
