@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Rogue::Rogue(const string& name, int healthPoint, int damage) : Unit(name, healthPoint, damage) {
+Rogue::Rogue(const string& name, int healthPoint, int damage, bool isFriendly) : Unit(name, healthPoint, damage, isFriendly)  {
     ability = new RogueAbility(this);
     unitType = rogueType;
 }

@@ -7,7 +7,7 @@
 
 class Berserk : public Unit {
     public:
-        Berserk(const string& name, int healthPoint, int damage);
+        Berserk(const string& name, int healthPoint, int damage, bool isFriendly);
         virtual ~Berserk();
 
         virtual void takeMagicDamage(int damage);

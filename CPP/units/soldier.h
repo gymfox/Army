@@ -7,7 +7,7 @@
 
 class Soldier: public Unit {
     public:
-        Soldier(const string& name, int healthPoint, int damage);
+        Soldier(const string& name, int healthPoint, int damage, bool isFriendly);
         virtual ~Soldier();
 };
 

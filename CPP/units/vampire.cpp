@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Vampire::Vampire(const string& name, int healthPoint, int damage) : Unit(name, healthPoint, damage) {
+Vampire::Vampire(const string& name, int healthPoint, int damage, bool isFriendly) : Unit(name, healthPoint, damage, isFriendly)  {
     ability = new VampireAbility(this);
     unitType = vampireType;
 }

@@ -10,7 +10,7 @@
 
 class Werewolf: public Unit {
     public:
-        Werewolf(const string& name, int healthPoint, int damage);
+        Werewolf(const string& name, int healthPoint, int damage, bool isFriendly);
         virtual ~Werewolf();
 };
 

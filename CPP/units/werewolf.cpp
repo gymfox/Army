@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Werewolf::Werewolf(const string& name, int healthPoint, int damage) : Unit(name, healthPoint, damage) {
+Werewolf::Werewolf(const string& name, int healthPoint, int damage, bool isFriendly) : Unit(name, healthPoint, damage, isFriendly)  {
     ability = new WolfAbility(this);
     normalState = new HumanState(this);
     wolfState = new WolfState(this);
