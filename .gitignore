@@ -1,5 +1,3 @@
 *.o
 runner.cpp
 runner
-CPP/test/runner
-CPP/test/runner.cpp
