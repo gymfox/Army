@@ -2,12 +2,11 @@
 
 using namespace std;
 
-Unit::Unit(const string& name, int healthPoint, int damage, bool isFriendly) {
+Unit::Unit(const string& name, int healthPoint, int damage) {
     this->name = name;
     this->healthPointLimit = healthPoint;
     this->currentHP = healthPoint;
     this->damage = damage;
-    this->isFriendly = isFriendly;
 }
 
 Unit::~Unit() {}

@@ -7,7 +7,7 @@
 
 class Rogue : public Unit {
     public:
-        Rogue(const string& name, int healthPoint, int damage, bool isFriendly);
+        Rogue(const string& name, int healthPoint, int damage);
         virtual ~Rogue();
 
         virtual void attack(Unit* victim);

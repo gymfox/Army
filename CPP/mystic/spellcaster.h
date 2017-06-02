@@ -21,7 +21,7 @@ class Spellcaster: public Unit {
         virtual void ensureManaIsNotOver();
 
     public:
-        Spellcaster(const string& name, int healthPoint, int damage, bool isFriendly, int manaPoint);
+        Spellcaster(const string& name, int healthPoint, int damage, int manaPoint);
         virtual ~Spellcaster();
 
         virtual void castSpell(Unit* victim);

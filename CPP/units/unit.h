@@ -40,7 +40,7 @@ class Unit {
         virtual void ensureIsNotSelfAttack(Unit* victim);
 
     public:
-        Unit(const string& name, int healthPoint, int damage, bool isFriendly);
+        Unit(const string& name, int healthPoint, int damage);
         virtual ~Unit();
 
         virtual void attack(Unit* victim);

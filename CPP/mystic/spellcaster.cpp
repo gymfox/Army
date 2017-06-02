@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Spellcaster::Spellcaster(const string& name, int healthPoint, int damage, bool isFriendly, int manaPoint) : Unit(name, healthPoint, damage, isFriendly) {
+Spellcaster::Spellcaster(const string& name, int healthPoint, int damage, int manaPoint) : Unit(name, healthPoint, damage) {
     this->MPLimits = manaPoint;
     this->currentMP = manaPoint;
 }

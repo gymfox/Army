@@ -8,7 +8,7 @@ using namespace std;
 
 class Wizard: public Spellcaster {
     public:
-        Wizard(const string& name, int healthPoint, int damage, bool isFriednly, int manaPoint);
+        Wizard(const string& name, int healthPoint, int damage, int manaPoint);
         ~Wizard();
 };
 
