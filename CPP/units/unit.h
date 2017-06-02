@@ -8,10 +8,12 @@ using namespace std;
 
 class Ability;
 class State;
+
 class UnitIsDeadException {};
 class IsSelfAttackException {};
 class ManaIsOverException {};
 class IsVictimException {};
+class IsFriendlyAttackException {};
 
 enum UnitType {
     soldierType,
@@ -38,6 +40,7 @@ class Unit {
 
         virtual void ensureIsAlive();
         virtual void ensureIsNotSelfAttack(Unit* victim);
+        virtual void ensureIsNotAlly(Unit* target);
 
     public:
         Unit(const string& name, int healthPoint, int damage);
@@ -52,6 +55,7 @@ class Unit {
         virtual void setHPLimit(int newHPLimit);
         virtual void setCurrentHP(int newCurrentHP);
         virtual void setDamage(int damage);
+        virtual void setFriendly();
 
         virtual void setCurrentState(State* newCurrentState);
         virtual void setNextState(State* newNextState);

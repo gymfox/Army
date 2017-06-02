@@ -7,12 +7,14 @@ Unit::Unit(const string& name, int healthPoint, int damage) {
     this->healthPointLimit = healthPoint;
     this->currentHP = healthPoint;
     this->damage = damage;
+    this->isFriendly = false;
 }
 
 Unit::~Unit() {}
 
 void Unit::attack(Unit* victim) {
     ensureIsNotSelfAttack(victim);
+    ensureIsNotAlly(victim);
     ensureIsAlive();
     ability->attack(victim);
 }
@@ -54,6 +56,10 @@ void Unit::setCurrentHP(int newCurrentHP) {
 
 void Unit::setDamage(int newDamage) {
     damage = newDamage;
+}
+
+void Unit::setFriendly() {
+    isFriendly = !isFriendly;
 }
 
 void Unit::setCurrentState(State* newCurrentState) {
@@ -119,6 +125,12 @@ void Unit::ensureIsAlive() {
 void Unit::ensureIsNotSelfAttack(Unit* victim) {
     if ( this == victim ) {
         throw IsSelfAttackException();
+    }
+}
+
+void Unit::ensureIsNotAlly(Unit* target) {
+    if ( this->isAlly() == target->isAlly() ) {
+        throw IsFriendlyAttackException() ;
     }
 }
 
