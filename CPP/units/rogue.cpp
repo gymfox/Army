@@ -4,7 +4,7 @@ using namespace std;
 
 Rogue::Rogue(const string& name, int healthPoint, int damage) : Unit(name, healthPoint, damage)  {
     ability = new RogueAbility(this);
-    unitType = rogueType;
+    unitType = rogue;
 }
 
 Rogue::~Rogue() {}

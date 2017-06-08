@@ -16,12 +16,12 @@ class IsVictimException {};
 class IsFriendlyAttackException {};
 
 enum UnitType {
-    soldierType,
-    rogueType,
-    berserkType,
-    vampireType,
-    werewolfType,
-    wizardType
+    soldier,
+    rogue,
+    berserk,
+    vampire,
+    werewolf,
+    wizard
 };
 
 class Unit {
