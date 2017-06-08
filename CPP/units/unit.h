@@ -31,10 +31,10 @@ class Unit {
         int currentHP;
         int damage;
         int unitType;
+        bool isFriendly;
         State* normalState;
         State* alternativeState;
         Ability* ability;
-        bool isFriendly;
         
     protected:
         virtual void ensureIsAlive();
@@ -68,6 +68,8 @@ class Unit {
         virtual int getCurrentHP() const;
         virtual int getDamage() const;
         virtual bool isAlly() const;
+
+        virtual Ability* getAbility() const;
 
         virtual State* getCurrentState() const;
         virtual State* getNextState() const;

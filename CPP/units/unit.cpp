@@ -102,6 +102,10 @@ bool Unit::isAlly() const {
     return isFriendly;
 }
 
+Ability* Unit::getAbility() const {
+    return ability;
+}
+
 State* Unit::getCurrentState() const {
     return normalState;
 }
