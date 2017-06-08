@@ -9,9 +9,12 @@ class Unit;
 class Spellbooks;
 
 class Ability {
+    private:
+        double getHealthMultiplier() const;
     protected:
         int unitType;
         Unit* currentUnit;
+
     public:
         Ability(Unit* currentUnit);
         virtual ~Ability();
