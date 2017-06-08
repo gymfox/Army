@@ -60,18 +60,21 @@ class ArmyTest : public CxxTest::TestSuite {
             Berserk* berserk = new Berserk("T-900", 120, 15);
             Vampire* vampire = new Vampire("Count Dracula", 100, 10);
             Werewolf* wolf = new Werewolf("Van Hellsing", 80, 15);
+            Wizard* wizard = new Wizard("Marilyn", 80, 10, 120);
 
             TS_ASSERT_EQUALS(soldier->getUnitType(), 0);
             TS_ASSERT_EQUALS(rogue->getUnitType(), 1);
             TS_ASSERT_EQUALS(berserk->getUnitType(), 2);
             TS_ASSERT_EQUALS(vampire->getUnitType(), 3);
             TS_ASSERT_EQUALS(wolf->getUnitType(), 4);
+            TS_ASSERT_EQUALS(wizard->getUnitType(), 5);
 
             delete soldier;
             delete rogue;
             delete berserk;
             delete vampire;
             delete wolf;
+            delete wizard;
         }
 
         void testUnitIsDeadException() {
