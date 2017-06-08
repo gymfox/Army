@@ -4,7 +4,8 @@ using namespace std;
 
 Berserk::Berserk(const string& name, int healthPoint, int damage) : Unit(name, healthPoint, damage)  {
     ability = new BerserkAbility(this);
-    unitType = berserk;
+    // unitType = berserk;
+    setUnitType(berserk);
 }
 
 Berserk::~Berserk() {}

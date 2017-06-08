@@ -6,7 +6,8 @@ Werewolf::Werewolf(const string& name, int healthPoint, int damage) : Unit(name,
     ability = new WolfAbility(this);
     normalState = new HumanState(this);
     wolfState = new WolfState(this);
-    unitType = werewolf;
+    // unitType = werewolf;
+    setUnitType(werewolf);
 }
 
 Werewolf::~Werewolf() {

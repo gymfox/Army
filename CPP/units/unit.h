@@ -30,10 +30,10 @@ class Unit {
         int healthPointLimit;
         int currentHP;
         int damage;
+        int unitType;
         
     protected:
         bool isFriendly;
-        int unitType;
         State* normalState;
         State* wolfState;
         Ability* ability;
@@ -59,6 +59,8 @@ class Unit {
 
         virtual void setCurrentState(State* newCurrentState);
         virtual void setNextState(State* newNextState);
+
+        virtual void setUnitType(int newUnitType);
 
         virtual const string& getName() const;
         virtual int getHPLimit() const;

@@ -70,6 +70,10 @@ void Unit::setNextState(State* newNextState) {
     wolfState = newNextState;
 }
 
+void Unit::setUnitType(int newUnitType) {
+    unitType = newUnitType;
+}
+
 const string& Unit::getName() const {
     return name;
 }
