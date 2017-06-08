@@ -31,13 +31,12 @@ class Unit {
         int currentHP;
         int damage;
         int unitType;
+        State* normalState;
+        State* alternativeState;
+        Ability* ability;
+        bool isFriendly;
         
     protected:
-        bool isFriendly;
-        State* normalState;
-        State* wolfState;
-        Ability* ability;
-
         virtual void ensureIsAlive();
         virtual void ensureIsNotSelfAttack(Unit* victim);
         virtual void ensureIsNotAlly(Unit* target);
@@ -56,6 +55,8 @@ class Unit {
         virtual void setCurrentHP(int newCurrentHP);
         virtual void setDamage(int damage);
         virtual void setFriendly();
+
+        virtual void setAbility(Ability* newAbility);
 
         virtual void setCurrentState(State* newCurrentState);
         virtual void setNextState(State* newNextState);

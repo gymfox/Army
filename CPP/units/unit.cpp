@@ -10,7 +10,11 @@ Unit::Unit(const string& name, int healthPoint, int damage) {
     this->isFriendly = false;
 }
 
-Unit::~Unit() {}
+Unit::~Unit() {
+    delete ability;
+    delete normalState;
+    delete alternativeState;
+}
 
 void Unit::attack(Unit* victim) {
     ensureIsNotSelfAttack(victim);
@@ -62,12 +66,16 @@ void Unit::setFriendly() {
     isFriendly = !isFriendly;
 }
 
+void Unit::setAbility(Ability* newAbility) {
+    ability = newAbility;
+}
+
 void Unit::setCurrentState(State* newCurrentState) {
     normalState = newCurrentState;
 }
 
 void Unit::setNextState(State* newNextState) {
-    wolfState = newNextState;
+    alternativeState = newNextState;
 }
 
 void Unit::setUnitType(int newUnitType) {
@@ -99,7 +107,7 @@ State* Unit::getCurrentState() const {
 }
 
 State* Unit::getNextState() const {
-    return wolfState;
+    return alternativeState;
 }
 
 const int Unit::getUnitType() const {

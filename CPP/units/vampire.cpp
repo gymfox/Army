@@ -3,8 +3,9 @@
 using namespace std;
 
 Vampire::Vampire(const string& name, int healthPoint, int damage) : Unit(name, healthPoint, damage)  {
-    ability = new VampireAbility(this);
-    // unitType = vampire;
+    setAbility(new VampireAbility(this));
+    setCurrentState(new HumanState(this));
+    setNextState(new HumanState(this));
     setUnitType(vampire);
 }
 
