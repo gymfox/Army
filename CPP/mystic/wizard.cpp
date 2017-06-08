@@ -4,7 +4,7 @@ using namespace std;
 
 Wizard::Wizard(const string& name, int healthPoint, int damage, int manaPoint) : Spellcaster(name, healthPoint, damage, manaPoint) {
     ability = new WizardAbility(this);
-    unitType = wizardType;
+    unitType = wizard;
     this->battleMage = true;
 }
 

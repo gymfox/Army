@@ -12,7 +12,7 @@ void Ability::attack(Unit* victim) {
 void Ability::counterAttack(Unit* victim) {
     currentUnit->takeDamage(victim->getDamage() / 2);
     
-    if ( victim->getUnitType() == vampireType ) {
+    if ( victim->getUnitType() == vampire ) {
         victim->heal(currentUnit->getCurrentHP() / 10);
     }
 }
