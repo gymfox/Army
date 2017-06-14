@@ -1,3 +1,4 @@
 *.o
 runner.cpp
 runner
+test/cxxtest/*
