@@ -3,6 +3,7 @@
 
 #include "ability.h"
 #include "../units/unit.h"
+#include "../spells/spell.h"
 
 class WizardAbility : public Ability {
     public:

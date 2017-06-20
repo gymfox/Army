@@ -13,7 +13,6 @@ class Ability {
         int unitType;
         double getHealthMultiplier() const;
         
-        //create setter's getCurrentUnit();
     protected:
         Unit* currentUnit;
 
@@ -24,8 +23,9 @@ class Ability {
         virtual void attack(Unit* victim);
         virtual void counterAttack(Unit* victim);
         virtual void takeMagicDamage(int damage);
-        virtual void castSpell(Unit* victim, Spell* spell);
+        virtual void castSpell(Unit* victim, Spell* spell); 
         virtual void changeState();
+
 };
 
 #endif //ABILITY_H

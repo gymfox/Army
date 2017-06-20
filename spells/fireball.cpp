@@ -1,5 +1,10 @@
 #include "fireball.h"
 
-Fireball::Fireball() : Spell("Fireball", 8, 12) {}
+Fireball::Fireball() {
+    setSpellsName("Fireball");
+    setManaConsumption(8);
+    setHitPoints(12);
+    setSpellsType(battleSpell);
+}
 
 Fireball::~Fireball() {}
