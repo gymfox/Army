@@ -1,4 +1,4 @@
 *.o
 runner.cpp
 runner
-test/cxxtest/*
+test/cxxtest/
