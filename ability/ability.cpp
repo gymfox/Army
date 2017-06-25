@@ -1,4 +1,4 @@
-test#include "ability.h"
+#include "ability.h"
 
 Ability::Ability(Unit* currentUnit) : currentUnit(currentUnit) {}
 
