@@ -42,3 +42,5 @@ void Ability::changeState() {
 double Ability::getHealthMultiplier() const {
     return (double)currentUnit->getCurrentHP() / (double)currentUnit->getHPLimit();
 }
+
+test
