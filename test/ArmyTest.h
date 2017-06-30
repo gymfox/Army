@@ -11,7 +11,7 @@
 #include "../state/wolfstate.h"
 #include "../state/humanstate.h"
 
-#include "../combat/ability.h"
+#include "../ability/ability.h"
 
 #include "../mystic/spellcaster.h"
 #include "../mystic/wizard.h"
@@ -19,6 +19,7 @@
 #include "../mystic/priest.h"
 #include "../mystic/warlock.h"
 #include "../units/demon.h"
+#include "../mystic/necromancer.h"
     
 #include "../spells/spell.h"
 #include "../spells/fireball.h"
@@ -299,6 +300,12 @@ class ArmyTest : public CxxTest::TestSuite {
 
             delete soldier;
             delete warlock;
+        }
+
+        void testNecromancer() {
+            Necromancer* necro = new Necromancer("Necros", 90, 5, 120);
+
+            delete necro;
         }
 
         void testSpellbooks() {

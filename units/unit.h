@@ -2,7 +2,7 @@
 #define UNIT_H
 
 #include <iostream>
-#include "../combat/ability.h"
+#include "../ability/ability.h"
 
 using namespace std;
 
@@ -23,7 +23,8 @@ enum UnitType {
     wizard,
     healer,
     priest,
-    warlock
+    warlock,
+    necromancer
 };
 
 class Unit {
