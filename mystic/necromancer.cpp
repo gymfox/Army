@@ -10,10 +10,15 @@ Necromancer::Necromancer(const string& name, int healthPoint, int damage, int ma
 
 Necromancer::~Necromancer() {}
 
-Necromancer::castSpell(Unit* victim) {
-
+void Necromancer::castSpell(Unit* victim) {
+    if ( victim->getUnitType() == berserk ) {
+        return;
+    }
+    addObservable(victim);
+    Spellcaster::castSpell(victim);
 }
 
-Necromancer::attack(Unit* victim) {
-    
+void Necromancer::attack(Unit* victim) {
+    addObservable(victim);
+    Unit::attack(victim);
 }
