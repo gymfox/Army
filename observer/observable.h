@@ -9,18 +9,17 @@ using namespace std;
 class Observer;
 
 class Observable {
-    private:
-        set<Observer*> observer;
+    protected:
+        set<Observer*> observers;
 
     public:
         Observable();
         virtual ~Observable() = 0;
 
-        virtual Observer* getObserver() const;
+        virtual const set<Observer*>& getObservers() const;
 
         virtual void addObserver(Observer* observer);
         virtual void removeObserver(Observer* observer);
-        virtual void notifyObserver();
 };
 
 #endif //OBSERVABLE_H

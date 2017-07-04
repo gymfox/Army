@@ -10,10 +10,10 @@ using namespace std;
 class Necromancer: public Spellcaster {
     public:
         Necromancer(const string& name, int healthPoint, int damage, int manaPoint);
-        ~Necromancer();
+        virtual ~Necromancer();
 
-        void attack(Unit* victim);
-        void castSpell(Unit* victim);
+        virtual void attack(Unit* victim);
+        virtual void castSpell(Unit* victim);
 };
 
 #endif //NECROMANCER_H

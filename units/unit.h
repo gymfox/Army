@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include "../ability/ability.h"
+#include "../observer/observer.h"
+#include "../observer/observable.h"
 
 using namespace std;
 
@@ -27,7 +29,7 @@ enum UnitType {
     necromancer
 };
 
-class Unit {
+class Unit: public Observer, public Observable {
     private:
         string name;
         int healthPointLimit;
@@ -39,8 +41,8 @@ class Unit {
         Ability* ability;
         
     protected:
-        virtual void ensureIsAlive();
         virtual void ensureIsNotSelfAttack(Unit* victim);
+        virtual void ensureIsAlive();
 
     public:
         Unit(const string& name, int healthPoint, int damage);
@@ -74,6 +76,12 @@ class Unit {
         virtual State* getNextState() const;
 
         virtual const int getUnitType() const;
+        
+        virtual const set<Observer*>& getObservers() const;
+        virtual const set<Observable*>& getObservables() const;
+
+        virtual void notifyObservers();
+        virtual void notifyObservable();
 
         virtual void heal(int healthPoint);
 };
