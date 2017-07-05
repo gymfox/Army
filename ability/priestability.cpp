@@ -1,7 +1,6 @@
 #include "priestability.h"
 
 PriestAbility::PriestAbility(Unit* currentUnit) : Ability(currentUnit) {}
-
 PriestAbility::~PriestAbility() {}
 
 void PriestAbility::castSpell(Unit* victim, Spell* spell) {
@@ -12,7 +11,7 @@ void PriestAbility::castSpell(Unit* victim, Spell* spell) {
         return;
         }
         victim->takeMagicDamage(spell->getHitPoints()/2);
-        
+
         return;
     }
     if ( spell->getSpellsType() == healSpell ) {
@@ -20,4 +19,5 @@ void PriestAbility::castSpell(Unit* victim, Spell* spell) {
 
         return;
     }
+
 }
