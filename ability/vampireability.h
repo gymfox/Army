@@ -5,9 +5,6 @@
 #include "../units/unit.h"
 
 class VampireAbility: public Ability {
-	private:
-		void vampirism(Unit* victim);
-
 	public:
 		VampireAbility(Unit* currentUnit);
 		virtual ~VampireAbility();
