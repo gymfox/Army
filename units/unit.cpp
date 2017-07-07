@@ -148,7 +148,7 @@ void Unit::heal(int healthPoint) {
 
     if ( newCurrentHP > getHPLimit() ) {
         setCurrentHP(getHPLimit());
-
+        
         return;
     }
 

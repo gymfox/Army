@@ -2,6 +2,7 @@
 #define SPELL_H 
 
 #include "../units/unit.h"
+#include "../ability/ability.h"
 
 using namespace std;
 

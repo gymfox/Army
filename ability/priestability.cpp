@@ -1,6 +1,7 @@
 #include "priestability.h"
 
 PriestAbility::PriestAbility(Unit* currentUnit) : Ability(currentUnit) {}
+
 PriestAbility::~PriestAbility() {}
 
 void PriestAbility::castSpell(Unit* victim, Spell* spell) {
@@ -19,5 +20,4 @@ void PriestAbility::castSpell(Unit* victim, Spell* spell) {
 
         return;
     }
-
 }
