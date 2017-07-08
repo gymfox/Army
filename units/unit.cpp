@@ -26,6 +26,7 @@ void Unit::takeDamage(int damage) {
     ensureIsAlive();
 
     if ( getCurrentHP() <= damage ) {
+        
         setCurrentHP(0);
         notifyObservers();
         notifyObservable();
