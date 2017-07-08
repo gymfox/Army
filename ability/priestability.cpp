@@ -22,7 +22,7 @@ void PriestAbility::castSpell(Unit* victim, Spell* spell) {
     }
     if ( spell->getSpellsType() == blessedSpell ) {
         ensureIsNotInfected(victim);
-        // victim->setNextState(new AngelState);
+        victim->setNextState(new AngelState(victim));
 
         return;
     }
